@@ -1,0 +1,37 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  
+}
+
+.cabecalho {
+  border-bottom: 1px solid  #939393;
+  padding-bottom: 6px;
+  margin-bottom: 17px;
+  font-weight: 600;
+  font-size: 22px;
+  color: #7d7d7d;
+}
+
+
+.container-cs {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.example-header {
+  margin-top: 22px;
+  min-height: 64px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
