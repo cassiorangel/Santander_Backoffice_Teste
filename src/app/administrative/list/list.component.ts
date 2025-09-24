@@ -5,6 +5,7 @@ import { MatSort, Sort } from '@angular/material/sort';
 import { RecordsData } from 'src/app/models/records';
 import { Subject, takeUntil } from 'rxjs';
 import { AdminControlService } from 'src/app/admin-control/admin-control.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -21,7 +22,9 @@ export class ListComponent implements OnDestroy {
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(
-    private adminControlService: AdminControlService
+    private adminControlService: AdminControlService,
+    private router: Router,
+     private route: ActivatedRoute
   ) { }
 
   ngAfterViewInit() {
@@ -47,6 +50,15 @@ export class ListComponent implements OnDestroy {
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
+
+  onEdit(id: string) {
+    this.router.navigate(['editar', id], { relativeTo: this.route })
+  }
+
+  onDelete(id: string) {
+    alert(id)
+  }
+
 
   ngOnDestroy(): void {
     this.destroy$.next(),

@@ -32,12 +32,16 @@
 .delete {
   font-size: 20px;
   color: #ec3838;
+  cursor: pointer;
+  user-select: none;
 }
 
 .editar {
   font-size: 20px;
   margin-right: 10px;
   color: #237fff;
+  cursor: pointer;
+  user-select: none;
 }
 
 .add {

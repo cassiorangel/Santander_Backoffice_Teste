@@ -9,8 +9,8 @@ const routes: Routes = [
     component: ListComponent
   },
   {
-    path: 'relatorio',
-    component: FormComponent
+    path: 'editar/:id',
+    component: FormComponent,
   }
 ];
 
