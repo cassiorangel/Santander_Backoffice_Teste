@@ -18,7 +18,7 @@ export class ListComponent {
 
   constructor() {
     // Create 100 users
-    const users: RecordsData[] = [];
+    const users: any[] = [];
     for (let i = 1; i <= 100; i++) { users.push(createNewUser(i)); }
 
     // Assign the data to the data source for the table to render
@@ -38,7 +38,7 @@ export class ListComponent {
 }
 
 /** Builds and returns a new User. */
-function createNewUser(id: number): RecordsData {
+function createNewUser(id: number): any {
   const name =
     NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
     NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
