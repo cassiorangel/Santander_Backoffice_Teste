@@ -10,6 +10,7 @@
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event?.target?.value)" placeholder="Pesquisar">
   </mat-form-field>
+  <button mat-button color="primary" class="btn">Adicionar</button>
 </div>
 
 <div class="example-container container-cs mat-elevation-z8">
@@ -58,4 +59,7 @@
   </mat-table>
 
   <mat-paginator [pageSizeOptions]="[5, 10, 15]"></mat-paginator>
+
+  
+
 </div>

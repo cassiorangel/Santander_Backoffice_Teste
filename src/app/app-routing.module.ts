@@ -3,10 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'relatorio',
     loadChildren: () =>
       import('./administrative/administrative.module').then((m) => m.AdministrativeModule),
   },
+  {
+    path: '',
+    redirectTo: '/relatorio',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

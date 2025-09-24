@@ -40,6 +40,11 @@
   color: #237fff;
 }
 
+.add {
+  text-align: right;
+  
+}
+
 .farol-vermelho {
     color: #ba1616;
    font-size: 30px;
@@ -63,4 +68,18 @@
 .mat-table {
   overflow: auto;
   max-height: 500px;
+}
+
+.mdc-button {
+  margin-top: 20px;
+  max-width: 200px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background:#237fff;
+  color: #fff;
+}
+
+.btn {
+  float: right;
+  color: #fff!important;
 }

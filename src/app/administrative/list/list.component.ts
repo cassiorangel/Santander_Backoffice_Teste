@@ -5,6 +5,7 @@ import { MatSort, Sort } from '@angular/material/sort';
 import { RecordsData } from 'src/app/models/records';
 import { Subject, takeUntil } from 'rxjs';
 import { AdminControlService } from 'src/app/admin-control/admin-control.service';
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
