@@ -8,6 +8,10 @@ const routes: Routes = [
     path: '',
     component: ListComponent
   },
+   {
+    path: 'adicionar',
+    component: FormComponent,
+  },
   {
     path: 'editar/:id',
     component: FormComponent,
