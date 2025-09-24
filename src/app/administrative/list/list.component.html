@@ -18,13 +18,13 @@
 
     <!-- ID Column -->
     <ng-container matColumnDef="id">
-      <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> ID </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> Id </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> Name </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> Nome </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
     </ng-container>
 
@@ -41,6 +41,14 @@
          <i class="bi bi-battery-low farol-vermelho" *ngIf="row.farol === 'vermelho'"></i>
         <i class="bi bi-battery-charging farol-amarelo" *ngIf="row.farol === 'amarelo'"></i>
          <i class="bi bi-battery-full farol-verde" *ngIf="row.farol === 'verde'"></i>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> Ações </mat-header-cell>
+      <mat-cell *matCellDef="let row">
+          <i class="bi bi-pencil-square editar"></i>
+          <i class="bi bi-trash delete"></i>
       </mat-cell>
     </ng-container>
 

@@ -13,7 +13,7 @@ import { AdminControlService } from 'src/app/admin-control/admin-control.service
 export class ListComponent implements OnDestroy {
   private destroy$ = new Subject<void>();
 
-  displayedColumns = ['id', 'name', 'porcentagem', 'farol'];
+  displayedColumns = ['id', 'name', 'porcentagem', 'farol', 'actions'];
   dataSource: MatTableDataSource<RecordsData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
