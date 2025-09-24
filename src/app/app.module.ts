@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MaterialModule } from 'src/shared/material/material-module';
+import { HeadingComponent } from './shared/heading/heading.component';
+import { MaterialModule } from './shared/material/material-module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeadingComponent
   ],
   imports: [
     BrowserModule,
