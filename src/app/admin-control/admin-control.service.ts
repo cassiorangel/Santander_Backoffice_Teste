@@ -11,6 +11,6 @@ export class AdminControlService {
   constructor(private http: HttpClient) { }
 
   getAll() {
-    return this.http.get<RecordsData[]>(`${environment}relatorio`);
+    return this.http.get<RecordsData[]>(`${environment.API}relatorio`);
   }
 }

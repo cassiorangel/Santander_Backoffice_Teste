@@ -120,5 +120,11 @@
             "porcentagem": 100,
             "farol": "verde"
         },
+        {
+            "id": "21",
+            "name": "Carlos S.",
+            "porcentagem": 30,
+            "farol": "Amarelo"
+        }
     ]
 }
