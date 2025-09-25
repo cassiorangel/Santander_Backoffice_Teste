@@ -85,23 +85,10 @@ export class FormComponent implements OnDestroy {
   }
 
   onSubmit() {
-    let filtro = this.farol.filter((res: any) => res.id === this.reactiveForm.value.farol);
-
-    let obj = {
-      "name": this.reactiveForm.value.name,
-      "area": this.reactiveForm.value.area,
-      "porcentagem": this.reactiveForm.value.porcentagem,
-      "farol": [
-        {
-          "id": this.reactiveForm.value.farol,
-          "name": filtro[0].name.toLowerCase()
-        }
-      ]
-    }
 
     if (this.acao) {
-      console.log(this.reactiveForm.value)  
-      return this.adminControlService.updateControl(this.reactiveForm.value).subscribe({
+
+      return this.adminControlService.updateControl(this.montaObj(this.reactiveForm.value)).subscribe({
         next: (response: any) => {
           this.updateForm(response);
           alert('Atualização realizada com sucesso');
@@ -112,9 +99,10 @@ export class FormComponent implements OnDestroy {
           console.log(err)
         }
       });
+
     }
 
-    return this.adminControlService.createControl(obj)
+    return this.adminControlService.createControl(this.montaObj(this.reactiveForm.value))
       .subscribe({
         next: (response: any) => {
           this.updateForm(response);
@@ -126,6 +114,24 @@ export class FormComponent implements OnDestroy {
           console.log(err)
         }
       });
+  }
+
+
+  montaObj(objeto: any) {
+    let filtro = this.farol.filter((res: any) => res.id === objeto.farol);
+
+    let obj = {
+      "name": objeto?.name,
+      "area": objeto?.area,
+      "porcentagem": this.reactiveForm.value?.porcentagem,
+      "farol": [
+        {
+          "id": objeto?.farol,
+          "name": filtro[0]?.name.toLowerCase()
+        }
+      ]
+    }
+    return obj;
   }
 
   ngOnDestroy(): void {

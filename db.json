@@ -35,13 +35,8 @@
       "id": "4",
       "name": "Atticus M.",
       "area": "Tecnologia",
-      "porcentagem": 100,
-      "farol": [
-        {
-          "id": 1,
-          "name": "verde"
-        }
-      ]
+      "farol": 1,
+      "porcentagem": 100
     },
     {
       "id": "5",
@@ -306,6 +301,90 @@
         {
           "id": 2,
           "name": "amarelo"
+        }
+      ]
+    },
+    {
+      "id": "89c9",
+      "name": "Ana A.",
+      "area": "Externa",
+      "porcentagem": 100,
+      "farol": [
+        {
+          "id": 2,
+          "name": "amarelo"
+        }
+      ]
+    },
+    {
+      "id": "4e8e",
+      "name": "Isla J.",
+      "area": "Vendas",
+      "porcentagem": 30,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
+    },
+    {
+      "id": "6ab3",
+      "name": "Ana A.",
+      "area": "Externa",
+      "porcentagem": 100,
+      "farol": [
+        {
+          "id": 2,
+          "name": "amarelo"
+        }
+      ]
+    },
+    {
+      "id": "daa2",
+      "name": "Maia T.",
+      "area": "Recursos Humanos",
+      "porcentagem": 20,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
+    },
+    {
+      "id": "2c6c",
+      "name": "Luciano C.",
+      "area": "Manutenção",
+      "porcentagem": 1,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
+    },
+    {
+      "id": "5c7e",
+      "name": "Fabio L.",
+      "area": "Recursos Humanos",
+      "porcentagem": 51,
+      "farol": [
+        {
+          "id": 2,
+          "name": "amarelo"
+        }
+      ]
+    },
+    {
+      "id": "4f6f",
+      "name": "Caleri B.",
+      "area": "Manutenção",
+      "porcentagem": 100,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
         }
       ]
     }
