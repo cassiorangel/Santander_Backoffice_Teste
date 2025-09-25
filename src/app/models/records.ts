@@ -3,5 +3,5 @@ export interface RecordsData {
   name: string;
   area: string;
   porcentagem: string;
-  farol: string;
+  farol: any;
 }

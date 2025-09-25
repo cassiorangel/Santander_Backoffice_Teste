@@ -45,9 +45,9 @@
     <ng-container matColumnDef="farol">
       <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> Resultado </mat-header-cell>
       <mat-cell *matCellDef="let row">
-         <i class="bi bi-battery-low farol-vermelho" *ngIf="row.farol === 'vermelho'"></i>
-        <i class="bi bi-battery-charging farol-amarelo" *ngIf="row.farol === 'amarelo'"></i>
-         <i class="bi bi-battery-full farol-verde" *ngIf="row.farol === 'verde'"></i>
+         <i class="bi bi-battery-low farol-vermelho" *ngIf="row?.farol[0]?.name === 'vermelho'"></i>
+        <i class="bi bi-battery-charging farol-amarelo" *ngIf="row?.farol[0]?.name === 'amarelo'"></i>
+         <i class="bi bi-battery-full farol-verde" *ngIf="row?.farol[0]?.name === 'verde'"></i>
       </mat-cell>
     </ng-container>
 

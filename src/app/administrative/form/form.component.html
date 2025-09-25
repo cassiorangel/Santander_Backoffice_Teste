@@ -16,10 +16,9 @@
 
         <div>
             <label>Quadrante: </label>
-            <mat-radio-group formControlName="farol">
-                <mat-radio-button value="auto">Verde</mat-radio-button>
-                <mat-radio-button value="always">Amarelo</mat-radio-button>
-                <mat-radio-button value="never">Vermelho</mat-radio-button>
+            <mat-radio-group formControlName="farol" >
+                <mat-radio-button *ngFor="let item of farol" [value]="item.id">
+                    {{ item.name }}</mat-radio-button>
             </mat-radio-group>
         </div>
 
