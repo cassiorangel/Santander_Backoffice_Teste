@@ -30,9 +30,12 @@
                     {{ item.name }}</mat-radio-button>
             </mat-radio-group>
         </div>
+        <div>
+            <button type="submit" mat-raised-button color="primary" [disabled]="reactiveForm.invalid"
+                class="bt-n">Enviar</button>
 
-        <button type="submit" mat-raised-button color="primary" [disabled]="reactiveForm.invalid"
-            class="bt-n">Enviar</button>
+            <button type="button" mat-raised-button color="success" (click)="goBack()" class="bt-na">Voltar</button>
+        </div>
     </form>
 
 </div>

@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { AdminControlService } from 'src/app/admin-control/admin-control.service';
 import { RecordsData } from 'src/app/models/records';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-clientes-form',
@@ -18,6 +19,7 @@ export class FormComponent implements OnDestroy {
   constructor(
     private router: Router,
     private adminControlService: AdminControlService,
+    private location: Location,
     private route: ActivatedRoute) {
 
     this.reactiveForm = new FormGroup({
@@ -76,6 +78,10 @@ export class FormComponent implements OnDestroy {
       });
     }, 1000);
 
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
   controle() {
