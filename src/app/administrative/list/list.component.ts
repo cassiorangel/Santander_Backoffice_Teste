@@ -15,7 +15,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ListComponent implements OnDestroy {
   private destroy$ = new Subject<void>();
 
-  displayedColumns = ['id', 'name', 'porcentagem', 'farol', 'actions'];
+  displayedColumns = ['id', 'name', 'area', 'porcentagem', 'farol', 'actions'];
   dataSource: MatTableDataSource<RecordsData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

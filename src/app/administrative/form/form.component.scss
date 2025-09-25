@@ -1,0 +1,37 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container-a {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.example-container > * {
+  width: 100%;
+}
+
+.example-container form {
+  margin-bottom: 20px;
+}
+
+.example-container form > * {
+  margin: 5px 0;
+}
+
+.example-container .mat-radio-button {
+  margin: 0 5px;
+}
+
+.bt-n {
+    margin-top: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+      user-select: none!important;
+}

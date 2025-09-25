@@ -1,1 +1,29 @@
-<p>form works!</p>
+<div class="example-container-a">
+    <form class="example-container" [formGroup]="reactiveForm" (ngSubmit)="controle()">
+       <h2>Cadastro</h2>
+
+        <mat-form-field>
+            <input matInput formControlName="name" placeholder="Nome" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput formControlName="area" placeholder="Área" required>
+        </mat-form-field>
+
+        <mat-form-field >
+            <input matInput formControlName="porcentagem" placeholder="Porcentagem" required>
+        </mat-form-field>
+
+        <div>
+            <label>Quadrante: </label>
+            <mat-radio-group formControlName="farol">
+                <mat-radio-button value="auto">Verde</mat-radio-button>
+                <mat-radio-button value="always">Amarelo</mat-radio-button>
+                <mat-radio-button value="never">Vermelho</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <button type="submit" mat-raised-button color="primary" class="bt-n">Enviar</button>
+    </form>
+
+</div>

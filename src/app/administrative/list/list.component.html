@@ -28,6 +28,12 @@
       <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> Nome </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
     </ng-container>
+    
+   <!-- Name Column -->
+    <ng-container matColumnDef="area">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> Área </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.area}} </mat-cell>
+    </ng-container>
 
     <!-- Progress Column -->
     <ng-container matColumnDef="porcentagem">
