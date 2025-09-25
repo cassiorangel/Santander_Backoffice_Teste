@@ -258,6 +258,61 @@
       "area": "Limpeza",
       "farol": 1,
       "porcentagem": 100
+    },
+    {
+      "id": "33d3",
+      "name": "sa",
+      "area": "dsd",
+      "farol": 1,
+      "porcentagem": 1
+    },
+    {
+      "id": "4423",
+      "name": "Joao M.",
+      "area": "Tech",
+      "porcentagem": 60,
+      "farol": [
+        {
+          "id": 2,
+          "name": "amarelo"
+        }
+      ]
+    },
+    {
+      "id": "3b85",
+      "name": "Junio C.",
+      "area": "Recursos Humanos",
+      "porcentagem": 33,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
+    },
+    {
+      "id": "1fa9",
+      "name": "Arthur F.",
+      "area": "Tecnologia",
+      "porcentagem": 100,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
+        }
+      ]
+    },
+    {
+      "id": "f389",
+      "name": "Amanda G.",
+      "area": "Administração",
+      "porcentagem": 61,
+      "farol": [
+        {
+          "id": 2,
+          "name": "amarelo"
+        }
+      ]
     }
   ],
   "status": [

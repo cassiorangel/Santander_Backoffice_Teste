@@ -85,12 +85,26 @@ export class FormComponent implements OnDestroy {
   }
 
   onSubmit() {
+    let filtro = this.farol.filter((res: any) => res.id === this.reactiveForm.value.farol);
+
+    let obj = {
+      "name": this.reactiveForm.value.name,
+      "area": this.reactiveForm.value.area,
+      "porcentagem": this.reactiveForm.value.porcentagem,
+      "farol": [
+        {
+          "id": this.reactiveForm.value.farol,
+          "name": filtro[0].name.toLowerCase()
+        }
+      ]
+    }
+
     if (this.acao) {
       console.log(this.reactiveForm.value)
       return
     }
-    delete this.reactiveForm.value.id
-    return this.adminControlService.createControl(this.reactiveForm.value)
+
+    return this.adminControlService.createControl(obj)
       .subscribe({
         next: (response: any) => {
           this.updateForm(response);
