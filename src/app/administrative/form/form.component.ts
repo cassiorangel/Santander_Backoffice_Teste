@@ -13,7 +13,7 @@ import { RecordsData } from 'src/app/models/records';
 export class FormComponent implements OnDestroy {
   private destroy$ = new Subject<void>();
   reactiveForm!: FormGroup;
-  farols: any = []
+  farol: any = []
 
   constructor(
     private router: Router,
@@ -24,27 +24,11 @@ export class FormComponent implements OnDestroy {
       id: new FormControl(''),
       name: new FormControl('', Validators.required),
       area: new FormControl('', Validators.required),
-      farol: new FormControl('', Validators.required),
+      farol: new FormControl(1),
       porcentagem: new FormControl('', Validators.required),
     });
 
     this.dadosRelatorio();
-  }
-
-  get name() {
-    return this.reactiveForm.get('name')!;
-  }
-
-  get area() {
-    return this.reactiveForm.get('area')!;
-  }
-
-  get farol() {
-    return this.reactiveForm.get('farol')!;
-  }
-
-    get porcentagem() {
-    return this.reactiveForm.get('farol')!;
   }
 
   dadosRelatorio() {
@@ -55,7 +39,7 @@ export class FormComponent implements OnDestroy {
       )
       .subscribe({
         next: (response: any) => {
-          this.farols = response;
+          this.farol = response;
         },
         error: (err: any) => {
           //this.error = 'Algo de errado';

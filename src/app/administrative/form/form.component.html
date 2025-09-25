@@ -1,28 +1,38 @@
 <div class="example-container-a">
     <form class="example-container" [formGroup]="reactiveForm" (ngSubmit)="controle()">
-       <h2>Formulário aplicação</h2>
+        <h2>Formulário aplicação</h2>
 
         <mat-form-field>
             <input matInput formControlName="name" placeholder="Nome" required>
+            <mat-error *ngIf="reactiveForm.get('name')?.hasError('required')">
+                O campo nome deve ser informado.
+            </mat-error>
         </mat-form-field>
 
         <mat-form-field>
             <input matInput formControlName="area" placeholder="Área" required>
+            <mat-error *ngIf="reactiveForm.get('area')?.hasError('required')">
+                A área deve ser informada.
+            </mat-error>
         </mat-form-field>
 
-        <mat-form-field >
+        <mat-form-field>
             <input matInput type="number" formControlName="porcentagem" placeholder="Porcentagem" required>
+            <mat-error *ngIf="reactiveForm.get('porcentagem')?.hasError('required')">
+                A porcentagem deve ser informada.
+            </mat-error>
         </mat-form-field>
 
         <div>
             <label>Quadrante: </label>
-            <mat-radio-group formControlName="farol" >
-                <mat-radio-button *ngFor="let item of farols" [value]="item.id">
+            <mat-radio-group formControlName="farol">
+                <mat-radio-button *ngFor="let item of farol" [value]="item.id">
                     {{ item.name }}</mat-radio-button>
             </mat-radio-group>
         </div>
 
-        <button type="submit" mat-raised-button color="primary" class="bt-n">Enviar</button>
+        <button type="submit" mat-raised-button color="primary" [disabled]="reactiveForm.invalid"
+            class="bt-n">Enviar</button>
     </form>
 
 </div>
