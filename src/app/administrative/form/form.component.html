@@ -2,14 +2,14 @@
     <form class="example-container" [formGroup]="reactiveForm" (ngSubmit)="controle()">
         <h2>Formulário aplicação</h2>
 
-        <mat-form-field>
+        <mat-form-field class="ctr">
             <input matInput formControlName="name" placeholder="Nome" required>
             <mat-error *ngIf="reactiveForm.get('name')?.hasError('required')">
                 O campo nome deve ser informado.
             </mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class="ctr">
             <input matInput formControlName="area" placeholder="Área" required>
             <mat-error *ngIf="reactiveForm.get('area')?.hasError('required')">
                 A área deve ser informada.
