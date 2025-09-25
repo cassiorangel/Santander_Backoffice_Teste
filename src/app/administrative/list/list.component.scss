@@ -22,11 +22,13 @@
 .farol-amarelo {
   color: rgb(231, 231, 2);
   font-size: 30px;
+   user-select: none;
 }
 
 .farol-verde {
   color: #0b950b;
   font-size: 30px;
+   user-select: none;
 }
 
 .delete {
@@ -52,6 +54,7 @@
 .farol-vermelho {
     color: #ba1616;
    font-size: 30px;
+    user-select: none;
 }
 .container-cs {
   max-width: 90%;
