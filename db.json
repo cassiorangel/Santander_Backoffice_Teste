@@ -2,15 +2,10 @@
   "relatorio": [
     {
       "id": "1",
-      "name": "Violet A.",
-      "area": "Interna",
-      "porcentagem": 60,
-      "farol": [
-        {
-          "id": 2,
-          "name": "amarelo"
-        }
-      ]
+      "name": "Ana A.",
+      "area": "Externa",
+      "farol": 1,
+      "porcentagem": 100
     },
     {
       "id": "2",

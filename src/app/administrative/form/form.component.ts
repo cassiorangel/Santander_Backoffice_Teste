@@ -100,8 +100,18 @@ export class FormComponent implements OnDestroy {
     }
 
     if (this.acao) {
-      console.log(this.reactiveForm.value)
-      return
+      console.log(this.reactiveForm.value)  
+      return this.adminControlService.updateControl(this.reactiveForm.value).subscribe({
+        next: (response: any) => {
+          this.updateForm(response);
+          alert('Atualização realizada com sucesso');
+          this.router.navigate(['/relatorio']);
+        },
+        error: (err: any) => {
+          //this.error = 'Algo de errado';
+          console.log(err)
+        }
+      });
     }
 
     return this.adminControlService.createControl(obj)

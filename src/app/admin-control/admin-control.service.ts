@@ -32,4 +32,17 @@ export class AdminControlService {
     )
   }
 
+  updateControl(control: any) {
+    return this.http.put(`${environment.API}relatorio/${control.id}`, control)
+      .pipe(
+        take(1)
+      )
+  }
+
+  delete(id: string) {
+    return this.http.delete(`${environment.API}relatorio/${id}`)
+      .pipe(
+        take(1)
+      )
+  }
 }
