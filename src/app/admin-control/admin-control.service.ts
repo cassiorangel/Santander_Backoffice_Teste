@@ -26,4 +26,10 @@ export class AdminControlService {
     return this.http.get<RecordsData[]>(`${environment.API}status`);
   }
 
+  createControl(control: any) {
+    return this.http.post(`${environment.API}relatorio`, control).pipe(
+      take(1)
+    )
+  }
+
 }

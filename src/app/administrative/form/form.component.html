@@ -1,5 +1,5 @@
 <div class="example-container-a">
-    <form class="example-container" [formGroup]="reactiveForm" (ngSubmit)="controle()">
+    <form class="example-container" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
         <h2>Formulário aplicação</h2>
 
         <mat-form-field class="ctr">
@@ -33,7 +33,6 @@
         <div>
             <button type="submit" mat-raised-button color="primary" [disabled]="reactiveForm.invalid"
                 class="bt-n">Enviar</button>
-
             <button type="button" mat-raised-button color="success" (click)="goBack()" class="bt-na">Voltar</button>
         </div>
     </form>

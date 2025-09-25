@@ -14,7 +14,8 @@ import { Location } from '@angular/common';
 export class FormComponent implements OnDestroy {
   private destroy$ = new Subject<void>();
   reactiveForm!: FormGroup;
-  farol: any = []
+  farol: any = [];
+  acao: boolean;
 
   constructor(
     private router: Router,
@@ -51,8 +52,8 @@ export class FormComponent implements OnDestroy {
 
 
     if (this.route?.snapshot?.params['id']) {
-      console.log('registro', this.route?.snapshot?.params['id'])
-      this.adminControlService.loadById(this.route?.snapshot?.params['id'])
+      this.acao = true;
+      return this.adminControlService.loadById(this.route?.snapshot?.params['id'])
         .subscribe({
           next: (response: any) => {
             this.updateForm(response);
@@ -63,6 +64,7 @@ export class FormComponent implements OnDestroy {
           }
         });
     }
+    return this.acao = false;
     // console.log(registro)
     //this.updateForm(registro);
   }
@@ -70,13 +72,13 @@ export class FormComponent implements OnDestroy {
   updateForm(relatorio: RecordsData) {
     setTimeout(() => {
       this.reactiveForm.patchValue({
-        id: relatorio.id,
-        name: relatorio.name,
-        area: relatorio.area,
-        farol: relatorio.farol[0].id,
-        porcentagem: relatorio.porcentagem
+        id: relatorio?.id,
+        name: relatorio?.name,
+        area: relatorio?.area,
+        farol: relatorio?.farol[0]?.id,
+        porcentagem: relatorio?.porcentagem
       });
-    }, 1000);
+    }, 500);
 
   }
 
@@ -84,8 +86,24 @@ export class FormComponent implements OnDestroy {
     this.location.back();
   }
 
-  controle() {
-
+  onSubmit() {
+    if (this.acao) {
+      console.log(this.reactiveForm.value)
+      return
+    }
+    delete this.reactiveForm.value.id
+    return this.adminControlService.createControl(this.reactiveForm.value)
+      .subscribe({
+        next: (response: any) => {
+          this.updateForm(response);
+          alert('Controle cadastrado com sucesso');
+          this.router.navigate(['/relatorio'])
+        },
+        error: (err: any) => {
+          //this.error = 'Algo de errado';
+          console.log(err)
+        }
+      });
   }
 
   ngOnDestroy(): void {

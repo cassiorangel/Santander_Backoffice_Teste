@@ -1,270 +1,277 @@
 {
-    "relatorio": [
+  "relatorio": [
+    {
+      "id": "1",
+      "name": "Violet A.",
+      "area": "Interna",
+      "porcentagem": 60,
+      "farol": [
         {
-            "id": "1",
-            "name": "Violet A.",
-            "area": "Interna",
-            "porcentagem": 60,
-            "farol": [
-                {
-                    "id": 2,
-                    "name": "amarelo"
-                }
-            ]
-        },
-        {
-            "id": "2",
-            "name": "Maia T.",
-            "area": "Recursos Humanos",
-            "porcentagem": 20,
-            "farol": [
-                {
-                    "id": 3,
-                    "name": "vermelho"
-                }
-            ]
-        },
-        {
-            "id": "3",
-            "name": "Isla J.",
-            "area": "Vendas",
-            "porcentagem": 30,
-            "farol": [
-                {
-                    "id": 3,
-                    "name": "vermelho"
-                }
-            ]
-        },
-        {
-            "id": "4",
-            "name": "Atticus M.",
-            "area": "Tecnologia",
-            "porcentagem": 100,
-            "farol": [
-                {
-                    "id": 1,
-                    "name": "verde"
-                }
-            ]
-        },
-        {
-            "id": "5",
-            "name": "Jasper J.",
-            "area": "Menor Aprendiz",
-            "porcentagem": 90,
-            "farol": [
-                {
-                    "id": 1,
-                    "name": "verde"
-                }
-            ]
-        },
-        {
-            "id": "6",
-            "name": "Maia V.",
-            "area": "Marketing",
-            "porcentagem": 11,
-            "farol": [
-                {
-                    "id": 3,
-                    "name": "vermelho"
-                }
-            ]
-        },
-        {
-            "id": "7",
-            "name": "Amelia A.",
-            "area": "Finanças",
-            "porcentagem": 99,
-            "farol": [
-                {
-                    "id": 1,
-                    "name": "verde"
-                }
-            ]
-        },
-        {
-            "id": "8",
-            "name": "Cora C.",
-            "area": "Jurídico",
-            "porcentagem": 19,
-            "farol": [
-                {
-                    "id": 3,
-                    "name": "vermelho"
-                }
-            ]
-        },
-        {
-            "id": "9",
-            "name": "Elizabeth A.",
-            "area": "Varejo",
-            "porcentagem": 1,
-            "farol": [
-                {
-                    "id": 3,
-                    "name": "vermelho"
-                }
-            ]
-        },
-        {
-            "id": "10",
-            "name": "Asher V.",
-            "area": "Atacado",
-            "porcentagem": 50,
-            "farol": [
-                {
-                    "id": 2,
-                    "name": "amarelo"
-                }
-            ]
-        },
-        {
-            "id": "11",
-            "name": "Olivia A.",
-            "area": "Vendas",
-            "porcentagem": 33,
-            "farol": [
-                {
-                    "id": 3,
-                    "name": "vermelho"
-                }
-            ]
-        },
-        {
-            "id": "12",
-            "name": "Cora J.",
-            "area": "Recursos Humanos",
-            "porcentagem": 76,
-            "farol": [
-                {
-                    "id": 1,
-                    "name": "verde"
-                }
-            ]
-        },
-        {
-            "id": "13",
-            "name": "Maia T.",
-            "area": "Administração",
-            "porcentagem": 43,
-            "farol": [
-                {
-                    "id": 1,
-                    "name": "verde"
-                }
-            ]
-        },
-        {
-            "id": "14",
-            "name": "Violet A.",
-            "area": "Recepção",
-            "porcentagem": 37,
-            "farol": [
-                {
-                    "id": 3,
-                    "name": "vermelho"
-                }
-            ]
-        },
-        {
-            "id": "15",
-            "name": "Oliver A.",
-            "area": "Vendas",
-            "porcentagem": 2,
-            "farol": [
-                {
-                    "id": 3,
-                    "name": "vermelho"
-                }
-            ]
-        },
-        {
-            "id": "16",
-            "name": "Cora O.",
-            "area": "Jurídico",
-            "porcentagem": 100,
-            "farol": [
-                {
-                    "id": 1,
-                    "name": "verde"
-                }
-            ]
-        },
-        {
-            "id": "17",
-            "name": "Oliver J.",
-            "area": "Limpeza",
-            "porcentagem": 70,
-            "farol": [
-                {
-                    "id": 1,
-                    "name": "verde"
-                }
-            ]
-        },
-        {
-            "id": "18",
-            "name": "Asher J.",
-            "area": "Recursos Humanos",
-            "porcentagem": 88,
-            "farol": [
-                {
-                    "id": 1,
-                    "name": "verde"
-                }
-            ]
-        },
-        {
-            "id": "19",
-            "name": "Isabella A.",
-            "area": "Informatica",
-            "porcentagem": 49,
-            "farol": [
-                {
-                    "id": 2,
-                    "name": "amarelo"
-                }
-            ]
-        },
-        {
-            "id": "20",
-            "name": "Charlotte I.",
-            "area": "Finanças",
-            "porcentagem": 100,
-            "farol": [
-                {
-                    "id": 1,
-                    "name": "verde"
-                }
-            ]
-        },
-        {
-            "id": "21",
-            "name": "Carlos S.",
-            "area": "Administração",
-            "porcentagem": 30,
-            "farol": [
-                {
-                    "id": 2,
-                    "name": "amarelo"
-                }
-            ]
+          "id": 2,
+          "name": "amarelo"
         }
-    ],
-    "status": [
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Maia T.",
+      "area": "Recursos Humanos",
+      "porcentagem": 20,
+      "farol": [
         {
-            "id": 1,
-            "name": "Verde"
-        },
-        {
-            "id": 2,
-            "name": "Amarelo"
-        },
-        {
-            "id": 3,
-            "name": "Vermelho"
+          "id": 3,
+          "name": "vermelho"
         }
-    ]
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Isla J.",
+      "area": "Vendas",
+      "porcentagem": 30,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Atticus M.",
+      "area": "Tecnologia",
+      "porcentagem": 100,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Jasper J.",
+      "area": "Menor Aprendiz",
+      "porcentagem": 90,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Maia V.",
+      "area": "Marketing",
+      "porcentagem": 11,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Amelia A.",
+      "area": "Finanças",
+      "porcentagem": 99,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Cora C.",
+      "area": "Jurídico",
+      "porcentagem": 19,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Elizabeth A.",
+      "area": "Varejo",
+      "porcentagem": 1,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Asher V.",
+      "area": "Atacado",
+      "porcentagem": 50,
+      "farol": [
+        {
+          "id": 2,
+          "name": "amarelo"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Olivia A.",
+      "area": "Vendas",
+      "porcentagem": 33,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Cora J.",
+      "area": "Recursos Humanos",
+      "porcentagem": 76,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Maia T.",
+      "area": "Administração",
+      "porcentagem": 43,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Violet A.",
+      "area": "Recepção",
+      "porcentagem": 37,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Oliver A.",
+      "area": "Vendas",
+      "porcentagem": 2,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Cora O.",
+      "area": "Jurídico",
+      "porcentagem": 100,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Oliver J.",
+      "area": "Limpeza",
+      "porcentagem": 70,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Asher J.",
+      "area": "Recursos Humanos",
+      "porcentagem": 88,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Isabella A.",
+      "area": "Informatica",
+      "porcentagem": 49,
+      "farol": [
+        {
+          "id": 2,
+          "name": "amarelo"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Charlotte I.",
+      "area": "Finanças",
+      "porcentagem": 100,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Carlos S.",
+      "area": "Administração",
+      "porcentagem": 30,
+      "farol": [
+        {
+          "id": 2,
+          "name": "amarelo"
+        }
+      ]
+    },
+    {
+      "id": "f353",
+      "name": "Osvaldo C.",
+      "area": "Limpeza",
+      "farol": 1,
+      "porcentagem": 100
+    }
+  ],
+  "status": [
+    {
+      "id": 1,
+      "name": "Verde"
+    },
+    {
+      "id": 2,
+      "name": "Amarelo"
+    },
+    {
+      "id": 3,
+      "name": "Vermelho"
+    }
+  ]
 }

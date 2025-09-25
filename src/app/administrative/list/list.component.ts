@@ -37,6 +37,7 @@ export class ListComponent implements OnDestroy {
           this.dataSource = new MatTableDataSource(response);
           this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
+          this.paginator._intl.itemsPerPageLabel = 'Itens por página:';
         },
         error: (error) => {
           //this.visao = true;
