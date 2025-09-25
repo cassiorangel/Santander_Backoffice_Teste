@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subject } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { AdminControlService } from 'src/app/admin-control/admin-control.service';
 import { RecordsData } from 'src/app/models/records';
 
@@ -10,10 +10,10 @@ import { RecordsData } from 'src/app/models/records';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })
-export class FormComponent {
+export class FormComponent implements OnDestroy {
   private destroy$ = new Subject<void>();
   reactiveForm!: FormGroup;
-  farol: any = []
+  farols: any = []
 
   constructor(
     private router: Router,
@@ -31,24 +31,43 @@ export class FormComponent {
     this.dadosRelatorio();
   }
 
+  get name() {
+    return this.reactiveForm.get('name')!;
+  }
+
+  get area() {
+    return this.reactiveForm.get('area')!;
+  }
+
+  get farol() {
+    return this.reactiveForm.get('farol')!;
+  }
+
+    get porcentagem() {
+    return this.reactiveForm.get('farol')!;
+  }
+
   dadosRelatorio() {
-     // const registro: any = this.route?.snapshot?.params['id'];
+    // const registro: any = this.route?.snapshot?.params['id'];
     this.adminControlService.getStatus()
-       .subscribe({
-          next: (response: any) => {
-            this.farol = response;
-          },
-          error: (err: any) => {
-            //this.error = 'Algo de errado';
-            console.log(err)
-          }
-        });
+      .pipe(
+        takeUntil(this.destroy$),
+      )
+      .subscribe({
+        next: (response: any) => {
+          this.farols = response;
+        },
+        error: (err: any) => {
+          //this.error = 'Algo de errado';
+          console.log(err)
+        }
+      });
 
 
-     if(this.route?.snapshot?.params['id']) {
-       console.log('registro', this.route?.snapshot?.params['id'])
-       this.adminControlService.loadById(this.route?.snapshot?.params['id'])
-       .subscribe({
+    if (this.route?.snapshot?.params['id']) {
+      console.log('registro', this.route?.snapshot?.params['id'])
+      this.adminControlService.loadById(this.route?.snapshot?.params['id'])
+        .subscribe({
           next: (response: any) => {
             this.updateForm(response);
           },
@@ -57,13 +76,13 @@ export class FormComponent {
             console.log(err)
           }
         });
-     }
-      // console.log(registro)
-      //this.updateForm(registro);
+    }
+    // console.log(registro)
+    //this.updateForm(registro);
   }
 
-   updateForm(relatorio: any) {
-      setTimeout(() => {
+  updateForm(relatorio: RecordsData) {
+    setTimeout(() => {
       this.reactiveForm.patchValue({
         id: relatorio.id,
         name: relatorio.name,
@@ -77,5 +96,10 @@ export class FormComponent {
 
   controle() {
 
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

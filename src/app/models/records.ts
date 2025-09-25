@@ -3,5 +3,8 @@ export interface RecordsData {
   name: string;
   area: string;
   porcentagem: string;
-  farol: any;
+  farol: [{
+    id: string;
+    name: string;
+  }];
 }
