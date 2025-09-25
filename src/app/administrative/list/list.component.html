@@ -28,8 +28,8 @@
       <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> Nome </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
     </ng-container>
-    
-   <!-- Name Column -->
+
+    <!-- Name Column -->
     <ng-container matColumnDef="area">
       <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> Área </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.area}} </mat-cell>
@@ -45,17 +45,17 @@
     <ng-container matColumnDef="farol">
       <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> Resultado </mat-header-cell>
       <mat-cell *matCellDef="let row">
-         <i class="bi bi-battery-low farol-vermelho" *ngIf="row?.farol[0]?.name === 'vermelho'"></i>
+        <i class="bi bi-battery-low farol-vermelho" *ngIf="row?.farol[0]?.name === 'vermelho'"></i>
         <i class="bi bi-battery-charging farol-amarelo" *ngIf="row?.farol[0]?.name === 'amarelo'"></i>
-         <i class="bi bi-battery-full farol-verde" *ngIf="row?.farol[0]?.name === 'verde'"></i>
+        <i class="bi bi-battery-full farol-verde" *ngIf="row?.farol[0]?.name === 'verde'"></i>
       </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="actions">
       <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> Ações </mat-header-cell>
       <mat-cell *matCellDef="let row">
-          <i (click)="onEdit(row.id)" class="bi bi-pencil-square editar"></i>
-          <i (click)="onDelete(row.id)" class="bi bi-trash delete"></i>
+        <i (click)="onEdit(row.id)" class="bi bi-pencil-square editar"></i>
+        <i (click)="onDelete(row.id)" class="bi bi-trash delete"></i>
       </mat-cell>
     </ng-container>
 
@@ -65,7 +65,5 @@
   </mat-table>
 
   <mat-paginator [pageSizeOptions]="[5, 10, 15]"></mat-paginator>
-
-  
 
 </div>
