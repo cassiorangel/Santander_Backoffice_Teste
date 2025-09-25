@@ -94,3 +94,7 @@
   float: right;
   color: #fff!important;
 }
+
+::ng-deep .mat-mdc-table {
+   background: #f5f5f5;
+}
