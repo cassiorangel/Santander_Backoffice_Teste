@@ -38,10 +38,14 @@
   user-select: none;
 }
 
+::ng-deep .mat-sort-header-container {
+  user-select: none;
+}
+
 .editar {
   font-size: 20px;
   margin-right: 10px;
-  color: #237fff;
+  color: #777a7d;
   cursor: pointer;
   user-select: none;
 }
