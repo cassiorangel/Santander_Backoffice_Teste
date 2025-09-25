@@ -9,6 +9,15 @@
   margin-right: auto;
 }
 
+.cabecalho {
+  margin-top: 30px;
+  border-bottom: 1px solid #c13d3d;
+  padding-bottom: 6px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 22px;
+  color: #ef2525;
+}
 
 .example-container > * {
   width: 100%;
@@ -30,17 +39,17 @@
     margin-top: 12px;
     padding-top: 22px;
     padding-bottom: 22px;
-    width: 25%!important;
-    float: left;
+    width: 20%!important;
+    float: right;
 }
 
 .bt-na {
    margin-top: 12px;
     padding-top: 22px;
     padding-bottom: 22px;
-    width: 25%!important;
-    float: left;
-    margin-left: 10px;
+    width: 20%!important;
+    float: right;
+    margin-right: 10px;
 }
 
 .mat-mdc-raised-button.mat-primary {
