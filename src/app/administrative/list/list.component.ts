@@ -16,7 +16,6 @@ import { ModalConfirmComponent } from 'src/app/shared/modal-confirm/modal-confir
 })
 export class ListComponent implements OnDestroy {
   matDialogRef: MatDialogRef<ModalConfirmComponent>;
-  name: string = "";
   viewData: boolean = false;
 
   private destroy$ = new Subject<void>();
