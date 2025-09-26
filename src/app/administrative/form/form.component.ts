@@ -63,8 +63,6 @@ export class FormComponent implements OnDestroy {
         });
     }
     return this.acao = false;
-    // console.log(registro)
-    //this.updateForm(registro);
   }
 
   updateForm(relatorio: RecordsData) {
@@ -121,16 +119,21 @@ export class FormComponent implements OnDestroy {
     let filtro = this.farol.filter((res: any) => res.id === objeto.farol);
 
     let obj = {
+      "id": objeto?.id,
       "name": objeto?.name,
       "area": objeto?.area,
       "porcentagem": this.reactiveForm.value?.porcentagem,
       "farol": [
         {
-          "id": objeto?.farol,
+          "id": filtro[0]?.id,
           "name": filtro[0]?.name.toLowerCase()
         }
       ]
     }
+    if (this.acao) {
+      return obj;
+    }
+    delete obj?.id;
     return obj;
   }
 
