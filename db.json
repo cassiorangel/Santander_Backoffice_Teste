@@ -95,6 +95,18 @@
           "name": "verde"
         }
       ]
+    },
+    {
+      "id": "7908",
+      "name": "Guilherme S.",
+      "area": "Manutenção",
+      "porcentagem": 1,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
     }
   ],
   "status": [

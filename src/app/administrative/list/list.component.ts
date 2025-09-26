@@ -6,6 +6,8 @@ import { RecordsData } from 'src/app/models/records';
 import { Subject, takeUntil } from 'rxjs';
 import { AdminControlService } from 'src/app/admin-control/admin-control.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { ModalConfirmComponent } from 'src/app/shared/modal-confirm/modal-confirm.component';
 
 @Component({
   selector: 'app-list',
@@ -13,6 +15,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnDestroy {
+   matDialogRef: MatDialogRef<ModalConfirmComponent>;
+     name: string = "";
   
   private destroy$ = new Subject<void>();
 
@@ -25,6 +29,7 @@ export class ListComponent implements OnDestroy {
   constructor(
     private adminControlService: AdminControlService,
     private router: Router,
+    private matDialog: MatDialog,
     private route: ActivatedRoute
   ) { }
 
@@ -64,7 +69,7 @@ export class ListComponent implements OnDestroy {
     this.router.navigate(['editar', id], { relativeTo: this.route })
   }
 
-  onDelete(id: string) {
+  onDeletes(id: string) {
     this.adminControlService.delete(id)
       .subscribe({
         next: (response: any) => {
@@ -77,6 +82,26 @@ export class ListComponent implements OnDestroy {
         }
       });
   }
+
+  onDelete(controle: any) {
+  this.matDialogRef = this.matDialog.open(ModalConfirmComponent, {
+      data: { 
+        title: 'Atenção',
+        name: `${controle?.name}?`
+      },
+      disableClose: true
+    });
+
+    this.matDialogRef.afterClosed().subscribe(res => {
+      console.log(res, 'acao')
+      if ((res == true)) {
+        this.name = "";
+      }
+    });
+  }
+
+
+
 
   ngOnDestroy(): void {
     this.destroy$.next(),

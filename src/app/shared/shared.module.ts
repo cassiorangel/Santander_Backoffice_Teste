@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { MaterialModule } from './material/material-module';
 import { HeadingComponent } from './heading/heading.component';
+import { ModalConfirmComponent } from './modal-confirm/modal-confirm.component';
 
 @NgModule({
   declarations: [
     SpinnerComponent,
-    HeadingComponent
+    HeadingComponent,
+    ModalConfirmComponent
   ],
   imports: [
     MaterialModule,
@@ -15,6 +17,7 @@ import { HeadingComponent } from './heading/heading.component';
   ],
   exports: [
     MaterialModule,
+    ModalConfirmComponent,
     SpinnerComponent,
     HeadingComponent
   ]

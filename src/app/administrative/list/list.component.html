@@ -55,7 +55,7 @@
       <mat-header-cell *matHeaderCellDef mat-sort-header class="destaque"> Ações </mat-header-cell>
       <mat-cell *matCellDef="let row">
         <i (click)="onEdit(row.id)" class="bi bi-pencil-square editar"></i>
-        <i (click)="onDelete(row.id)" class="bi bi-trash delete"></i>
+        <i (click)="onDelete(row)" class="bi bi-trash delete"></i>
       </mat-cell>
     </ng-container>
 
