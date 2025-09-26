@@ -17,11 +17,12 @@ import { ModalConfirmComponent } from 'src/app/shared/modal-confirm/modal-confir
 export class ListComponent implements OnDestroy {
   matDialogRef: MatDialogRef<ModalConfirmComponent>;
   name: string = "";
+  viewData: boolean = false;
 
   private destroy$ = new Subject<void>();
 
   displayedColumns = ['id', 'name', 'area', 'porcentagem', 'farol', 'actions'];
-  dataSource: MatTableDataSource<RecordsData>;
+  dataSource: MatTableDataSource<RecordsData[]>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -43,13 +44,15 @@ export class ListComponent implements OnDestroy {
         takeUntil(this.destroy$),
       )
       .subscribe({
-        next: (response: any) => {
+        next: (response: any[]) => {
           this.dataSource = new MatTableDataSource(response);
           this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
           this.paginator._intl.itemsPerPageLabel = 'Itens por página:';
           this.paginator._intl.nextPageLabel = 'Próxima página';
           this.paginator._intl.previousPageLabel = 'Página anterior';
+          this.filtroData(this.dataSource?.filteredData)
+
         },
         error: (error) => {
           //this.visao = true;
@@ -62,8 +65,15 @@ export class ListComponent implements OnDestroy {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;
+    this.filtroData(this.dataSource?.filteredData)
   }
 
+  filtroData(data: any) {
+    if (!data.length) {
+      return this.viewData = true;
+    }
+    return this.viewData = false;
+  }
   onEdit(id: string) {
     this.adminControlService.loaderView(true);
     this.router.navigate(['editar', id], { relativeTo: this.route })
