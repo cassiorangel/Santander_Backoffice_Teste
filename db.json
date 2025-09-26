@@ -74,13 +74,25 @@
     },
     {
       "id": "fdcc",
-      "name": "Alice S.",
-      "area": "Vendas",
-      "porcentagem": 23,
+      "name": "Joaquim N.",
+      "area": "Varejo",
+      "porcentagem": 99,
       "farol": [
         {
-          "id": 2,
-          "name": "amarelo"
+          "id": 1,
+          "name": "verde"
+        }
+      ]
+    },
+    {
+      "id": "c99e",
+      "name": "Pedro J.",
+      "area": "Chefe",
+      "porcentagem": 100,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
         }
       ]
     }

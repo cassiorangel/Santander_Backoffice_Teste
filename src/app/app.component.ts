@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AdminControlService } from './admin-control/admin-control.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'backoffice';
 
-  
+  viewLoader: boolean = false;
+
+  constructor(
+      private adminControlService: AdminControlService,
+    ) { 
+      this.adminControlService.viewEventEmmiter.subscribe(res => this.viewLoader = res);
+    }
 }

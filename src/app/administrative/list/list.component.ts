@@ -13,6 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnDestroy {
+  
   private destroy$ = new Subject<void>();
 
   displayedColumns = ['id', 'name', 'area', 'porcentagem', 'farol', 'actions'];
@@ -57,6 +58,7 @@ export class ListComponent implements OnDestroy {
   }
 
   onEdit(id: string) {
+    this.adminControlService.loaderView(true);
     this.router.navigate(['editar', id], { relativeTo: this.route })
   }
 

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { RecordsData } from '../models/records';
 import { take } from 'rxjs';
@@ -9,7 +9,16 @@ import { take } from 'rxjs';
 })
 export class AdminControlService {
 
+  viewEventEmmiter = new EventEmitter<boolean>();
+
   constructor(private http: HttpClient) { }
+
+  loaderView(view: boolean) {
+    if(view) {
+      return this.viewEventEmmiter.emit(true);
+    }
+    return this.viewEventEmmiter.emit(false);
+  }
 
   getAll() {
     return this.http.get<RecordsData[]>(`${environment.API}relatorio`);

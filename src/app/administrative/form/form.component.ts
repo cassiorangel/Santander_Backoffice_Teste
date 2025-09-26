@@ -74,7 +74,9 @@ export class FormComponent implements OnDestroy {
         farol: relatorio?.farol[0]?.id,
         porcentagem: relatorio?.porcentagem
       });
-    }, 500);
+
+      this.adminControlService.loaderView(false);
+    }, 2000);
 
   }
 
