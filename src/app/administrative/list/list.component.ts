@@ -15,9 +15,9 @@ import { ModalConfirmComponent } from 'src/app/shared/modal-confirm/modal-confir
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnDestroy {
-   matDialogRef: MatDialogRef<ModalConfirmComponent>;
-     name: string = "";
-  
+  matDialogRef: MatDialogRef<ModalConfirmComponent>;
+  name: string = "";
+
   private destroy$ = new Subject<void>();
 
   displayedColumns = ['id', 'name', 'area', 'porcentagem', 'farol', 'actions'];
@@ -48,8 +48,8 @@ export class ListComponent implements OnDestroy {
           this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
           this.paginator._intl.itemsPerPageLabel = 'Itens por página:';
-          this.paginator._intl.nextPageLabel  = 'Próxima página';
-          this.paginator._intl.previousPageLabel = 'Página anterior' 
+          this.paginator._intl.nextPageLabel = 'Próxima página';
+          this.paginator._intl.previousPageLabel = 'Página anterior'
         },
         error: (error) => {
           //this.visao = true;
@@ -69,7 +69,24 @@ export class ListComponent implements OnDestroy {
     this.router.navigate(['editar', id], { relativeTo: this.route })
   }
 
-  onDeletes(id: string) {
+  onDelete(controle: any) {
+    this.matDialogRef = this.matDialog.open(ModalConfirmComponent, {
+      data: {
+        title: 'Atenção',
+        name: `${controle?.name}?`
+      },
+      disableClose: true
+    });
+
+    this.matDialogRef.afterClosed().subscribe(res => {
+      console.log(res, 'acao')
+      if ((res == true)) {
+        this.onDeleteControl(controle.id)
+      }
+    });
+  }
+
+  onDeleteControl(id: string) {
     this.adminControlService.delete(id)
       .subscribe({
         next: (response: any) => {
@@ -82,26 +99,6 @@ export class ListComponent implements OnDestroy {
         }
       });
   }
-
-  onDelete(controle: any) {
-  this.matDialogRef = this.matDialog.open(ModalConfirmComponent, {
-      data: { 
-        title: 'Atenção',
-        name: `${controle?.name}?`
-      },
-      disableClose: true
-    });
-
-    this.matDialogRef.afterClosed().subscribe(res => {
-      console.log(res, 'acao')
-      if ((res == true)) {
-        this.name = "";
-      }
-    });
-  }
-
-
-
 
   ngOnDestroy(): void {
     this.destroy$.next(),
