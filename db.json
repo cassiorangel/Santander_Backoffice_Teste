@@ -1,18 +1,6 @@
 {
   "relatorio": [
     {
-      "id": "1",
-      "name": "Ana Ab.",
-      "area": "Externas",
-      "porcentagem": 100,
-      "farol": [
-        {
-          "id": 1,
-          "name": "verde"
-        }
-      ]
-    },
-    {
       "id": "824f",
       "name": "Marcia R.",
       "area": "Estetica",
@@ -99,15 +87,15 @@
   ],
   "status": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Verde"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Amarelo"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Vermelho"
     }
   ]
