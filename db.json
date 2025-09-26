@@ -87,15 +87,15 @@
   ],
   "status": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Verde"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Amarelo"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Vermelho"
     }
   ]

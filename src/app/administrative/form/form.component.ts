@@ -66,6 +66,7 @@ export class FormComponent implements OnDestroy {
   }
 
   updateForm(relatorio: RecordsData) {
+    console.log( relatorio?.farol[0]?.id)
     setTimeout(() => {
       this.reactiveForm.patchValue({
         id: relatorio?.id,
