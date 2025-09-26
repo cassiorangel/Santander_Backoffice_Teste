@@ -12,7 +12,9 @@ export class AdminControlService {
 
   viewEventEmmiter = new EventEmitter<boolean>();
 
-  constructor(private http: HttpClient
+  constructor(
+    private http: HttpClient,
+    private readonly snackBar: MatSnackBar,
   ) { }
 
   loaderView(view: boolean) {
@@ -55,5 +57,17 @@ export class AdminControlService {
       .pipe(
         take(1)
       )
+  }
+
+  openSnackBar(
+    message: string,
+    action: string,
+    className: string,
+    duration: number
+  ) {
+    this.snackBar.open(message, action, {
+      duration: duration,
+      panelClass: [className]
+    });
   }
 }

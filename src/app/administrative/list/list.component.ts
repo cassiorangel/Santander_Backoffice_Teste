@@ -8,7 +8,6 @@ import { AdminControlService } from 'src/app/admin-control/admin-control.service
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ModalConfirmComponent } from 'src/app/shared/modal-confirm/modal-confirm.component';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-list',
@@ -31,7 +30,6 @@ export class ListComponent implements OnDestroy {
   constructor(
     private adminControlService: AdminControlService,
     private router: Router,
-    private _snackBar: MatSnackBar,
     private matDialog: MatDialog,
     private route: ActivatedRoute
   ) { }
@@ -101,10 +99,7 @@ export class ListComponent implements OnDestroy {
     this.adminControlService.delete(id)
       .subscribe({
         next: (response: any) => {
-          this._snackBar.open(`Colaborador(a) ${response?.name}, excluído(a) com sucesso!`, 'Close', {
-            duration: 3000,
-            panelClass: ['blue-snackbar']
-          });
+          this.adminControlService.openSnackBar(`Colaborador(a) ${response?.name}, excluído(a) com sucesso!`, `Fechar`, `success-snackbar`, 3000);
           this.listRegistros();
         },
         error: (err: any) => {
