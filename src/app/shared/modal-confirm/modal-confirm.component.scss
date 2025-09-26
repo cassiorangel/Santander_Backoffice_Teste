@@ -5,3 +5,18 @@
 .destaque {
     font-weight: 600;
 }
+
+
+.mat-mdc-unelevated-button.mat-primary {
+    --mdc-filled-button-container-color: #c00;
+}
+
+.mat-mdc-unelevated-button.mat-warn {
+    --mdc-filled-button-container-color: #fff;
+    --mdc-filled-button-label-text-color: #c00;
+    border: 1px solid rgb(204, 73, 73);
+}
+
+.mat-mdc-dialog-actions.mat-mdc-dialog-actions-align-end, .mat-mdc-dialog-actions[align=end] {
+    margin: 10px;
+}
