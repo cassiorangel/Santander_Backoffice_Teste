@@ -24,10 +24,14 @@ export class ListComponent implements OnDestroy {
   constructor(
     private adminControlService: AdminControlService,
     private router: Router,
-     private route: ActivatedRoute
+    private route: ActivatedRoute
   ) { }
 
   ngAfterViewInit() {
+    this.listRegistros();
+  }
+
+  listRegistros() {
     this.adminControlService.getAll()
       .pipe(
         takeUntil(this.destroy$),
@@ -57,13 +61,22 @@ export class ListComponent implements OnDestroy {
   }
 
   onDelete(id: string) {
-    alert(id)
+    this.adminControlService.delete(id)
+      .subscribe({
+        next: (response: any) => {
+          console.log('r', response);
+          alert('Registro excluído com sucesso!');
+          this.listRegistros();
+        },
+        error: (err: any) => {
+          console.log(err)
+        }
+      });
   }
-
 
   ngOnDestroy(): void {
     this.destroy$.next(),
-    this.destroy$.complete()
+      this.destroy$.complete()
   };
 }
 

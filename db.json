@@ -61,18 +61,6 @@
       ]
     },
     {
-      "id": "9117",
-      "name": "Caio J.",
-      "area": "Finanças",
-      "porcentagem": 81,
-      "farol": [
-        {
-          "id": 1,
-          "name": "verde"
-        }
-      ]
-    },
-    {
       "id": "139e",
       "name": "Deus",
       "area": "Mundo",
@@ -81,6 +69,18 @@
         {
           "id": 1,
           "name": "verde"
+        }
+      ]
+    },
+    {
+      "id": "fdcc",
+      "name": "Alice S.",
+      "area": "Vendas",
+      "porcentagem": 23,
+      "farol": [
+        {
+          "id": 2,
+          "name": "amarelo"
         }
       ]
     }
