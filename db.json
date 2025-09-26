@@ -2,8 +2,8 @@
   "relatorio": [
     {
       "id": "1",
-      "name": "Ana A.",
-      "area": "Externa",
+      "name": "Ana Ab.",
+      "area": "Externas",
       "porcentagem": 100,
       "farol": [
         {
@@ -52,7 +52,7 @@
       "id": "783e",
       "name": "Kleber J.",
       "area": "Tester",
-      "porcentagem": 70,
+      "porcentagem": 71,
       "farol": [
         {
           "id": 2,

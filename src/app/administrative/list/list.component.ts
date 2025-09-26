@@ -49,7 +49,7 @@ export class ListComponent implements OnDestroy {
           this.dataSource.sort = this.sort;
           this.paginator._intl.itemsPerPageLabel = 'Itens por página:';
           this.paginator._intl.nextPageLabel = 'Próxima página';
-          this.paginator._intl.previousPageLabel = 'Página anterior'
+          this.paginator._intl.previousPageLabel = 'Página anterior';
         },
         error: (error) => {
           //this.visao = true;
@@ -79,7 +79,6 @@ export class ListComponent implements OnDestroy {
     });
 
     this.matDialogRef.afterClosed().subscribe(res => {
-      console.log(res, 'acao')
       if ((res == true)) {
         this.onDeleteControl(controle.id)
       }

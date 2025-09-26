@@ -12,6 +12,7 @@
   font-weight: 600;
   font-size: 22px;
   color: #ef2525;
+   user-select: none;
 }
 
 .destaque {
@@ -30,11 +31,18 @@
   font-size: 30px;
    user-select: none;
 }
+svg {
+   user-select: none;
+}
 
 .delete {
   font-size: 20px;
   color: #ec3838;
   cursor: pointer;
+  user-select: none;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
   user-select: none;
 }
 
