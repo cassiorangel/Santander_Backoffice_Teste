@@ -83,6 +83,30 @@
           "name": "verde"
         }
       ]
+    },
+    {
+      "id": "a8e1",
+      "name": "Lary ",
+      "area": "moda",
+      "porcentagem": 1,
+      "farol": [
+        {
+          "id": 3,
+          "name": "vermelho"
+        }
+      ]
+    },
+    {
+      "id": "84f1",
+      "name": "Glauco M.",
+      "area": "Propaganda",
+      "porcentagem": 98,
+      "farol": [
+        {
+          "id": 1,
+          "name": "verde"
+        }
+      ]
     }
   ],
   "status": [

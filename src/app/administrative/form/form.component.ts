@@ -66,7 +66,6 @@ export class FormComponent implements OnDestroy {
   }
 
   updateForm(relatorio: RecordsData) {
-    console.log( relatorio?.farol[0]?.id)
     setTimeout(() => {
       this.reactiveForm.patchValue({
         id: relatorio?.id,
@@ -92,7 +91,7 @@ export class FormComponent implements OnDestroy {
       return this.adminControlService.updateControl(this.montaObj(this.reactiveForm.value)).subscribe({
         next: (response: any) => {
           this.updateForm(response);
-          alert('Atualização realizada com sucesso');
+           this.adminControlService.openSnackBar(`Colaborador(a) ${response?.name}, atualizado(a) com sucesso!`, `Fechar`, `success-snackbar`, 3000);
           this.router.navigate(['/relatorio']);
         },
         error: (err: any) => {
@@ -107,7 +106,7 @@ export class FormComponent implements OnDestroy {
       .subscribe({
         next: (response: any) => {
           this.updateForm(response);
-          alert('Controle cadastrado com sucesso');
+           this.adminControlService.openSnackBar(`Controle cadastrado com sucesso`, `Fechar`, `success-snackbar`, 3000);
           this.router.navigate(['/relatorio']);
         },
         error: (err: any) => {
