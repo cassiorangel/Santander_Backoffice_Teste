@@ -25,7 +25,7 @@ export class FormComponent implements OnDestroy {
       id: new FormControl(''),
       name: new FormControl('', Validators.required),
       area: new FormControl('', Validators.required),
-      farol: new FormControl(1),
+      farol: new FormControl('1'),
       porcentagem: new FormControl('', Validators.required),
     });
 
