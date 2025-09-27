@@ -1,6 +1,6 @@
 # Backoffice
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.9.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão15.2.9.
 
 ## Development server
 
@@ -9,6 +9,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Roda back json-server fake
+
+npm run db no terminal
 
 ## Build
 
